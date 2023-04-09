@@ -1,0 +1,18 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Measuring-the-Unmeasurable
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Jonah Monk
+    family-names: Gibbon
+    email: jonahgibbon@hotmail.com
+    affiliation: University of Cambridge
+identifiers:
+  - type: url
+    value: >-
+      https://github.com/jonahgibbon/Measuring-the-Unmeasurable.git
