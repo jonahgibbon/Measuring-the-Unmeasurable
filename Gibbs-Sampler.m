@@ -1,6 +1,6 @@
 tic
 
-Date='20180101';
+Date='20190401';
 Iterates=10000;
 M=200;
 a_1=1;
@@ -139,9 +139,11 @@ end
 
 Data=N_Tb(Iterates-round(Iterates/2):Iterates);
 pd=fitdist(Data,'kernel','Kernel','Normal');
+disp('_______________________')
 disp(strcat('Data used: ',Date))
 fprintf('Iterates = %u \n',Iterates)
 fprintf('M = %u \n',M)
+
 M=max(Data);
 m=min(Data);
 X=m:(M-m)/999:M;
@@ -155,12 +157,10 @@ figure
 plot(X,Y,'Color','Black')
 xlabel("N")
 
-
 fprintf('Min = %u \n',m)
-fprintf('Max = %u \n',M)
 
 Quant=cumtrapz(x,y);
-QuantCheck=[0.05,0.25,0.5,0.75,0.95];
+QuantCheck=[0.05,0.5,0.95];
 cnt=1;
 while cnt<=size(Quant,2)-1
     cnt1=1;
@@ -173,8 +173,12 @@ while cnt<=size(Quant,2)-1
     end
     cnt=cnt+1;
 end
-
+fprintf('Max = %u \n',M)
+fprintf('Mean = %.1f \n',mean(pd))
+fprintf('Std = %.1f \n',std(pd))
+fprintf('Observed cases n = %u \n',n)
 toc
+disp('_______________________')
 beep on
 beep
 
