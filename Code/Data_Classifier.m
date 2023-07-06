@@ -110,6 +110,7 @@ while Count<=size(Forumns,1)
     Count=Count+1;
 end
 end
+
 function CompleteData = CombineLists(MasterPairs,TotalMembers)
 
 CompleteData=zeros(2^size(MasterPairs,1)-1,size(MasterPairs,1)+1);
@@ -307,9 +308,9 @@ while Counter<=size(a,1)
     end 
     Counter=Counter+1;
 end
-end
 Counter=1;
 while Counter<=size(Data,1)
+
     if Data(Counter,end)==0
         Data(Counter,:)=[];
         Counter=Counter-1;
